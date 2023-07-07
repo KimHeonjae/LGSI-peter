@@ -1,7 +1,19 @@
 # LGSI
 ## Water Management System in India using Raspberry Pi
 
-
+## Table of Contents
+Note: This is only a navigation guide for the specification, and does not define or mandate terms for any specification-compliant documents.
+- [프로젝트에 대한 소개](#프로젝트에-대한-소개)
+  - [Description](#description)
+  - [개발 기간](#개발-기간)
+  - [팀 소개](#팀-소개)
+- [시작 가이드](#시작-가이드)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+- [Stacks](#stacks)
+- [화면 구성 및 API 주소](#화면-구성-및-api-주소)
+- [주요 기능](#주요-기능)
+    
 ## 프로젝트에 대한 소개
 
 ### Description
@@ -20,35 +32,30 @@
 
 전체적으로 간결하고 명료하게 쓰고, 프로젝트의 가치 전달.
 
-
 ## 시작 가이드
 
-### 요구사항(Requirements)
+### Requirements
 For building and running the application you need:
 Node.js ....
 ......
 ......
 필요한 요구사항들과 버전들 적어준다.
 
-### 설치 및 실행(Installation)
+### Installation
 repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 과정에 대한 내용들 코드로.
 
-
-## 기술 스택(개발 환경) Stacks
+## Stacks
 - web - java, HTML, jquery??
 - DB - MySQL??
 - Design - Figma
 
 프로젝트 개발하면서 사용한 기술 스택 써준다.
 
-
-## 화면 구성/API 주소
+## 화면 구성 및 API 주소
 - 프론트엔드- 개발한 화면에 대한 내용 사진으로.
 <img src="https://github.com/KimHeonjae/LGSI/assets/134956232/0c76d398-1476-48c5-a5a1-56d35f9b4f3b.png" width="600" height="600">
 
-
 - 백엔드- API 주소 목록이나 이를 기록한 링크 걸어두면 좋을듯.
-
 
 ## 주요 기능
 프로젝트의 주요 기능들 소개한다. 크게 3가지로 설명하면 될듯.
