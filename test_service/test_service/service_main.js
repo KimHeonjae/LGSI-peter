@@ -7,11 +7,13 @@ service.register("getdata", function(message) {
     let readData
 
     try {
-        readData = fs.readFileSync('/dev/ttyACM0', 'utf8');
+        readData = fs.readFileSync('/home/root/result.txt', 'utf8');
+        let myArray = readData.split("\n\n");
+        
         message.respond({
             returnValue: true,
             reply: "Read complete",
-            text : readData,
+            value: myArray[myArray.length-2],
             errorMsg : ""
             });
     } catch (err) {
