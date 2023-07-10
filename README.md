@@ -12,7 +12,7 @@
   - [Installation](#installation)
 - [Stacks](#stacks)
 - [Screen configuration/API address](#screen-configuration/api-address)
-- [주요 기능](#주요-기능)
+- [Key features](#key-features)
     
 ## Project information
 
@@ -55,7 +55,7 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 
 - 백엔드- API 주소 목록이나 이를 기록한 링크 걸어두면 좋을듯.
 
-## 주요 기능
+## Key features
 프로젝트의 주요 기능들 소개한다. 크게 3가지로 설명하면 될듯.
 지역별 수질 관련 데이터 제공 및 모니터링, 자동 업데이트 기능, 알림 기능, 
 * 지역별 수질 관련 데이터 제공 - 라즈베리 파이에 센서를 연결하여 수질 관련 데이터를 제공해준다. 구체적으로 물의 온도, pH, 탁도, 수위에 대한 데이터를 얻고, 이를 토대로 모니터링한다.
