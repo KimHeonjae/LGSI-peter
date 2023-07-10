@@ -23,12 +23,12 @@ Approximately **46%** of the population in India is suffering from water polluti
 * 2023.05.16 ∼ 2023.07.31
 
 ### Team members
-- Gyuwon Jung - 경북대학교 컴퓨터학부. Hardware build-up
-- Seonju Hong - 경북대학교 컴퓨터학부. Hardware build-up
-- Gyuwon Lee - 경북대학교 컴퓨터학부. Front-End
-- Jooyeon Lee - 경북대학교 컴퓨터학부. Front-End
-- Taegon Lee - 경북대학교 컴퓨터학부. Back-End / Server construction
-- Heonjae Kim - 경북대학교 통계학과. Project Manager
+- Gyuwon Jung - Kyungpook National University, School of Computer Science and Engineering. Hardware build-up
+- Seonju Hong - Kyungpook National University, School of Computer Science and Engineering. Hardware build-up
+- Gyuwon Lee - Kyungpook National University, School of Computer Science and Engineering. Front-End
+- Jooyeon Lee - Kyungpook National University, School of Computer Science and Engineering. Front-End
+- Taegon Lee - Kyungpook National University, School of Computer Science and Engineering. Back-End / Server construction
+- Heonjae Kim - Kyungpook National University, Department of Statistics. Project Manager
 
 전체적으로 간결하고 명료하게 쓰고, 프로젝트의 가치 전달.
 
