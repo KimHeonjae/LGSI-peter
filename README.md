@@ -3,18 +3,18 @@
 
 ## Table of Contents
 *Note: This is only a navigation guide for the specification, and does not define or mandate terms for any specification-compliant documents.*
-- [Introduction](#introduction)
+- [Project information](#project-information)
   - [Description](#description)
   - [Development period](#development-period)
   - [Team members](#team-members)
-- [시작 가이드](#시작-가이드)
+- [Getting Started Guide](#getting-started-guide)
   - [Requirements](#requirements)
   - [Installation](#installation)
 - [Stacks](#stacks)
 - [화면 구성 및 API 주소](#화면-구성-및-api-주소)
 - [주요 기능](#주요-기능)
     
-## Introduction
+## Project information
 
 ### Description
 Approximately **46%** of the population in India is suffering from water pollution. That's why we aim to enhance accessibility to clean water and promote better water management in India.
@@ -30,9 +30,7 @@ Approximately **46%** of the population in India is suffering from water polluti
 - Taegon Lee - Kyungpook National University, School of Computer Science and Engineering. Back-End / Server construction
 - Heonjae Kim - Kyungpook National University, Department of Statistics. Project Manager
 
-전체적으로 간결하고 명료하게 쓰고, 프로젝트의 가치 전달.
-
-## 시작 가이드
+## Getting Started Guide
 
 ### Requirements
 For building and running the application you need:
