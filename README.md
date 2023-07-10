@@ -5,8 +5,8 @@
 *Note: This is only a navigation guide for the specification, and does not define or mandate terms for any specification-compliant documents.*
 - [Introduction](#introduction)
   - [Description](#description)
-  - [개발 기간](#개발-기간)
-  - [팀 소개](#팀-소개)
+  - [Development period](#development-period)
+  - [Team members](#team-members)
 - [시작 가이드](#시작-가이드)
   - [Requirements](#requirements)
   - [Installation](#installation)
@@ -17,18 +17,18 @@
 ## Introduction
 
 ### Description
-인도에서 물 오염으로 고통받는 인구는 약 **46%** 이다. 그렇기 때문에 깨끗한 물에 대한 접근성을 개선하고 인도에서 더 나은 물 관리를 촉진하고자 한다. 
+Approximately **46%** of the population in India is suffering from water pollution. That's why we aim to enhance accessibility to clean water and promote better water management in India.
 
-### 개발 기간
+### Development period
 * 2023.05.16 ∼ 2023.07.31
 
-### 팀 소개
-- 정규원 - 경북대학교 컴퓨터학부. HW 구축
-- 홍선주 - 경북대학교 컴퓨터학부. HW 구축
-- 이규원 - 경북대학교 컴퓨터학부. 프론트엔드
-- 이주연 - 경북대학교 컴퓨터학부. 프론트엔드
-- 이태곤 - 경북대학교 컴퓨터학부. 백엔드 / 서버
-- 김헌재 - 경북대학교 통계학과. PM(프로젝트 기획)
+### Team members
+- Gyuwon Jung - 경북대학교 컴퓨터학부. Hardware build-up
+- Seonju Hong - 경북대학교 컴퓨터학부. Hardware build-up
+- Gyuwon Lee - 경북대학교 컴퓨터학부. Front-End
+- Jooyeon Lee - 경북대학교 컴퓨터학부. Front-End
+- Taegon Lee - 경북대학교 컴퓨터학부. Back-End / Server construction
+- Heonjae Kim - 경북대학교 통계학과. Project Manager
 
 전체적으로 간결하고 명료하게 쓰고, 프로젝트의 가치 전달.
 
