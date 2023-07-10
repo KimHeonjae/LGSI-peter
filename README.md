@@ -13,6 +13,7 @@
 - [Stacks](#stacks)
 - [Screen configuration / API address](#screen-configuration-/-api-address)
 - [Key features](#key-features)
+- [Workflow](#workflow)
     
 ## Project information
 
