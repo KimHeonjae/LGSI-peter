@@ -43,11 +43,9 @@ Node.js ....
 repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 과정에 대한 내용들 코드로.
 
 ## Stacks
-- web - java, HTML, jquery??
-- DB - MySQL??
+- web - java, HTML, MS visual studio
+- DB - MySQL, String, javascript
 - Design - Figma
-
-프로젝트 개발하면서 사용한 기술 스택 써준다.
 
 ## Screen configuration / API address
 - 프론트엔드- 개발한 화면에 대한 내용 사진으로.
@@ -62,5 +60,10 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 * 데이터 자동 업데이트 - 일정 시간이 지나면 자동적으로 데이터가 업데이트 되는 구조이다.
 * 알림 시스템 - 수질 데이터를 통해 물의 상태를 파악
   이를 통해 사용자는 즉각적으로 물 상태에 대한 정보를 받아 대응 조치를 취할 수 있다.
+
+## Workflow
+
+![image](https://github.com/KimHeonjae/LGSI-peter/assets/134956232/355ede7e-9235-4255-b7f3-d3eca587f457)
+
 
 
