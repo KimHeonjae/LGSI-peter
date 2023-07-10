@@ -2,8 +2,8 @@
 ## Water Management System in India using Raspberry Pi
 
 ## Table of Contents
-Note: This is only a navigation guide for the specification, and does not define or mandate terms for any specification-compliant documents.
-- [프로젝트에 대한 소개](#프로젝트에-대한-소개)
+*Note: This is only a navigation guide for the specification, and does not define or mandate terms for any specification-compliant documents.*
+- [Introduction](#introduction)
   - [Description](#description)
   - [개발 기간](#개발-기간)
   - [팀 소개](#팀-소개)
@@ -14,10 +14,10 @@ Note: This is only a navigation guide for the specification, and does not define
 - [화면 구성 및 API 주소](#화면-구성-및-api-주소)
 - [주요 기능](#주요-기능)
     
-## 프로젝트에 대한 소개
+## Introduction
 
 ### Description
-인도에서 물 오염으로 고통받는 인구는 약 46%이다. 그렇기 때문에 깨끗한 물에 대한 접근성을 개선하고 인도에서 더 나은 물 관리를 촉진하고자 한다. 
+인도에서 물 오염으로 고통받는 인구는 약 **46%** 이다. 그렇기 때문에 깨끗한 물에 대한 접근성을 개선하고 인도에서 더 나은 물 관리를 촉진하고자 한다. 
 
 ### 개발 기간
 * 2023.05.16 ∼ 2023.07.31
