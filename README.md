@@ -11,7 +11,7 @@
   - [Requirements](#requirements)
   - [Installation](#installation)
 - [Stacks](#stacks)
-- [Screen configuration/API address](#screen-configuration/api-address)
+- [Screen configuration / API address](#screen-configuration-/-api-address)
 - [Key features](#key-features)
     
 ## Project information
@@ -49,7 +49,7 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 
 프로젝트 개발하면서 사용한 기술 스택 써준다.
 
-## Screen configuration/API address
+## Screen configuration / API address
 - 프론트엔드- 개발한 화면에 대한 내용 사진으로.
 <img src="https://github.com/KimHeonjae/LGSI/assets/134956232/0c76d398-1476-48c5-a5a1-56d35f9b4f3b.png" width="600" height="600">
 
