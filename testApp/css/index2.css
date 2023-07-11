@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: 0;
+            overflow: hidden;
+        }
+        .mySlides img {
+            width: 100%;
+            height: auto;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 45%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 50px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            color: #bbb;
+            background-color: white;
+            /* opacity: 0.2; */
+        }
+        .dot-container {
+            text-align: center;
+            position: relative;
+            top: -100px;
+            z-index: 999;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: white;
+        }
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        @media only screen and (max-width: 300px) {
+            .prev, .next {font-size: 11px}
+        }
+
+        .slide-button-logout {
+            position: absolute;
+            top: 5%;
+            left: 95%;
+            width: 7%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            font-size: 15px;
+            font-weight: 750;
+            color: #867F7F;
+            background-color: rgba(255,255,255,0.6);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .slide-button-logout:hover {
+            color: black;
+            font-weight: bold;
+        }
+
+        .slide-button-start {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            width: 10%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: 750;
+            color: #867F7F;
+            background-color: rgba(255,255,255,0.6);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .slide-button-start:hover {
+            color: black;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: white;
+            padding: 20px;
+            padding-left: 40px;
+            font-family:'inter', sans-serif;
+            font-size: 15px;
+            /* text-align: center; */
+        }
+        .footerLogo {
+            display: inline-block;
+            font-size: 30px;
+            font-weight: 900;
+            color: gray;
+        }
+        .footerMenu {
+            display: inline-block;
+            margin-left: 40px;
+        }
+        .footerMenu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .footerMenu ul li {
+            display: inline-block;
+            margin: 0 30px;
+        }
+        .footerMenu ul li::after {
+            content: "|";
+            float: right;
+            color: #ccc;
+            margin-right: -37px;
+        }
+        .footerMenu ul li:last-child:after {
+            content: "";
+        }
+        .footerMenu ul li a {
+            color: gray;
+            text-decoration: none;
+        }
+        .footerMenu ul li a:hover {
+            color: black;
+            font-weight: bold;
+        }
+        .footerText {
+            color: #867F7F;
+            margin-top: 20px;
+            margin-left: 239px;
+        }
+        @media screen and (max-width: 550px) {
+            footer {
+                font-size: 11px;
+            }
+            #footerMenu {
+                display: block;
+                word-spacing: 10px;
+            }
+            #footerMenu ul li {
+                margin: 0;
+            }
+            #footerText {
+                margin-left: 0;
+            }
+        }
