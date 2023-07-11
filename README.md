@@ -14,6 +14,7 @@
 - [Screen configuration / API address](#screen-configuration-/-api-address)
 - [Key features](#key-features)
 - [Workflow](#workflow)
+- [Expectation](#expectation)
     
 ## Project information
 
@@ -62,11 +63,11 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 * **Automatic Data Updates** - It is a structure where data is automatically updated after a specific period of time. We develop a map that allows users to easily view the updated status of water resources.
 * **Alarm System** - We assess the state of water based on water quality data. When a dangerous situation occurs, we send a notification to the user within 10 milliseconds. This enables users to receive immediate information about the water condition and take necessary measures in response.
   
-  
-
 ## Workflow
 
 ![image](https://github.com/KimHeonjae/LGSI-peter/assets/134956232/355ede7e-9235-4255-b7f3-d3eca587f457)
+
+## Expectation
 
 
 
