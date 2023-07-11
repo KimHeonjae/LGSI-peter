@@ -50,6 +50,7 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 
 ## Screen configuration / API address
 - 프론트엔드- 개발한 화면에 대한 내용 사진으로.
+  
   예시
 <img src="https://github.com/KimHeonjae/LGSI/assets/134956232/0c76d398-1476-48c5-a5a1-56d35f9b4f3b.png" width="600" height="600">
 
