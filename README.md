@@ -25,12 +25,18 @@ Approximately **46%** of the population in India is suffering from water polluti
 * 2023.05.16 ∼ 2023.07.31
 
 ### Team members
-- Gyuwon Jung - Kyungpook National University, School of Computer Science and Engineering. Hardware build-up
-- Seonju Hong - Kyungpook National University, School of Computer Science and Engineering. Hardware build-up
-- Gyuwon Lee - Kyungpook National University, School of Computer Science and Engineering. Front-End
-- Jooyeon Lee - Kyungpook National University, School of Computer Science and Engineering. Front-End
-- Taegon Lee - Kyungpook National University, School of Computer Science and Engineering. Back-End / Server construction
-- Heonjae Kim - Kyungpook National University, Department of Statistics. Project Manager
+- **Gyuwon Jung**
+  - Kyungpook National University, School of Computer Science and Engineering. Hardware build-up
+- **Seonju Hong**
+  - Kyungpook National University, School of Computer Science and Engineering. Hardware build-up
+- **Gyuwon Lee**
+  - Kyungpook National University, School of Computer Science and Engineering. Front-End
+- **Jooyeon Lee**
+  - Kyungpook National University, School of Computer Science and Engineering. Front-End
+- **Taegon Lee**
+  - Kyungpook National University, School of Computer Science and Engineering. Back-End / Server construction
+- **Heonjae Kim**
+  - Kyungpook National University, Department of Statistics. Project Manager
 
 ## Getting Started Guide
 
@@ -59,9 +65,12 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 - 백엔드- API 주소 목록이나 이를 기록한 링크 걸어두면 좋을듯.
 
 ## Key features
-* **Provision of Regional Water Quality Data** - Collect water quality-related data by connecting sensors to a Raspberry Pi. Provide water quality data corresponding to the user's location. Specifically, We monitor water temperature, pH, turbidity and water level based on the collected data.
-* **Automatic Data Updates** - It is a structure where data is automatically updated after a specific period of time. We develop a map that allows users to easily view the updated status of water resources.
-* **Alarm System** - We assess the state of water based on water quality data. When a dangerous situation occurs, we send a notification to the user within 10 milliseconds. This enables users to receive immediate information about the water condition and take necessary measures in response.
+* **Provision of Regional Water Quality Data**
+  - Collect water quality-related data by connecting sensors to a Raspberry Pi. Provide water quality data corresponding to the user's location. Specifically, We monitor water temperature, pH, turbidity and water level based on the collected data.
+* **Automatic Data Updates**
+  - It is a structure where data is automatically updated after a specific period of time. We develop a map that allows users to easily view the updated status of water resources.
+* **Alarm System**
+  - We assess the state of water based on water quality data. When a dangerous situation occurs, we send a notification to the user within 10 milliseconds. This enables users to receive immediate information about the water condition and take necessary measures in response.
   
 ## Workflow
 
@@ -69,5 +78,9 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 
 ## Expectation
 
+* Public Utilization
+  * aaa
 
 
+* Commercial Utilization
+  * bbb
