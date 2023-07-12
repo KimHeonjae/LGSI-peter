@@ -24,7 +24,7 @@
 ### Description
 A think tank "Science and Environment Center", which proposes policies to the government, points out that on average **200,000 people** die every year from inadequate water supply and contaminated water, and **75%** of India's total population is affected by contaminated water. The accumulation of water quality and flow monitoring data is of paramount importance in order to diagnose pollution status in rivers and effectively manage water quality through efficient control of pollutants. That's why we aim to enhance accessibility to clean water and promote better water management in India.
 
-###### [Source: <https://www.newstown.co.kr/news/articleView.html?idxno=329356#google_vignette>]
+###### Source: <https://www.newstown.co.kr/news/articleView.html?idxno=329356#google_vignette>
 
 ### Development period
 * 2023.05.16 ∼ 2023.07.31
