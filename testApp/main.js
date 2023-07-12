@@ -1,48 +1,42 @@
 window.onload = function() {
-    
-   display_log("1");
-    // 파일 경로 설정
-    const fs = require('fs');
 
-    const filePath = '/home/root/result.txt';
+    let bridge = new WebOSServiceBridge();
 
-    display_log("2");
-    fs.readFile(filePath, 'utf8', (err, data) => {
-        if (err) {
-            display_log('파일을 읽는 동안 오류가 발생했습니다:', err);
-            return;
+    const url = 'luna://com.test.app.service/getdata';
+    const Params = '{}'
+
+    bridge.onservicecallback = send_data;
+    bridge.call(url, Params);
+
+    function send_data (msg){
+        let arg = JSON.parse(msg);
+        if (arg.returnValue) {
+            fetch('', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8',
+                },
+                body: json.stringify({
+                    cityName: arg.cityName,
+                    waterLevel: arg.waterLevel
+                }),
+            })
+            .then((response) => {
+                if(response.ok == true){
+                    display_log("response success");
+                    return response.json();
+                }
+                throw new Error('response error');
+            })
+            .catch((error) => display_log("connected but error"))
+            // display_log("connected")
+            // display_log(arg.cityName)
+            // display_log(arg.waterLevel)
+        } else {
+            display_log("not connected")
+            display_log(arg.errorText)
         }
-        display_log("3");
-        display_log('파일 내용:', data);
-    });
-    display_log("4");
-
-    // let bridge = new WebOSServiceBridge();
-
-    // const peripheralURI = 'luna://com.webos.service.peripheralmanager';
-    // const gpio_open ="/gpio/open";
-    // const gpio_close = "/gpio/close";
-    // const gpio_getValue = "/gpio/getValue";
-    // const gpio_pNum = "gpio18"; 
-
-    // bridge.onservicecallback = init_state;
-    // bridge.call(peripheralURI+gpio_open, '{"pin":"' +gpio_pNum+ '"}');
-    // bridge.call(peripheralURI+gpio_getValue, '{"pin":"' +gpio_pNum+ '"}');
-
-    // function init_state (msg){
-    //     let arg = JSON.parse(msg);
-    //     if (arg.returnValue) {
-    //         display_log("connected")
-    //         if (arg.value == "low") {
-    //             display_log("low")
-    //         } else {
-    //             display_log("high")
-    //         }                
-    //     } else {
-    //         display_log("not connected")
-    //         display_log(arg.errorText)
-    //     }
-    // }
+    }
     function display_log(msg) {
         let responseWindow = document.getElementById('response-window');
         responseWindow.innerHTML = msg + '<br>' + responseWindow.innerHTML;
