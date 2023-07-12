@@ -15,9 +15,13 @@
 - [Key features](#key-features)
 - [Workflow](#workflow)
 - [Expectation](#expectation)
-    
+  - [Public Utilization](#public-utilization)
+  - [Commercial Utilization](#commercial-utilization)
+
+-----------
+
 ## Project information
--------
+
 ### Description
 Approximately **46%** of the population in India is suffering from water pollution. That's why we aim to enhance accessibility to clean water and promote better water management in India.
 
@@ -38,6 +42,8 @@ Approximately **46%** of the population in India is suffering from water polluti
 - **Kim Heonjae**
   - Kyungpook National University, Department of Statistics. Project Manager
 
+--------
+
 ## Getting Started Guide
 
 ### Requirements
@@ -50,10 +56,14 @@ Node.js ....
 ### Installation
 repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 과정에 대한 내용들 코드로.
 
+--------
+
 ## Stacks
 - web - java, HTML, MS visual studio
 - DB - MySQL, String, javascript
 - Design - Figma
+
+--------
 
 ## Screen configuration / API address
 - 프론트엔드- 개발한 화면에 대한 내용 사진으로.
@@ -64,6 +74,8 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 
 - 백엔드- API 주소 목록이나 이를 기록한 링크 걸어두면 좋을듯.
 
+---------
+
 ## Key features
 * **Provision of Regional Water Quality Data**
   - Collect water quality-related data by connecting sensors to a Raspberry Pi. Provide water quality data corresponding to the user's location. Specifically, We monitor water temperature, pH, turbidity and water level based on the collected data.
@@ -71,10 +83,14 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
   - It is a structure where data is automatically updated after a specific period of time. We develop a map that allows users to easily view the updated status of water resources.
 * **Alarm System**
   - We assess the state of water based on water quality data. When a dangerous situation occurs, we send a notification to the user within 10 milliseconds. This enables users to receive immediate information about the water condition and take necessary measures in response.
+
+---------
   
 ## Workflow
 
 ![image](https://github.com/KimHeonjae/LGSI-peter/assets/134956232/355ede7e-9235-4255-b7f3-d3eca587f457)
+
+---------
 
 ## Expectation
 
