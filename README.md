@@ -17,7 +17,7 @@
 - [Expectation](#expectation)
     
 ## Project information
-
+-------
 ### Description
 Approximately **46%** of the population in India is suffering from water pollution. That's why we aim to enhance accessibility to clean water and promote better water management in India.
 
