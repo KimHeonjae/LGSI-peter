@@ -79,8 +79,11 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 ## Expectation
 
 * Public Utilization
-  * aaa
-
+  * The Indian government can utilize this system to monitor the current status of water pollution and scarcity on a regional basis in real-time, and devise solutions.
+  * Specifically, it can be used to measure water levels and utilize them for issuing disaster alerts such as flood warnings or drought advisories.
+  * In the future, as this system accumulates more extensive and higher-quality data, it will be possible to predict water quality changes in advance and expand the implementation of regional water quality forecasts to proactively respond to deteriorating water quality in water management.
 
 * Commercial Utilization
-  * bbb
+  * Water quality management and monitoring system for personal aquariums or fish tanks.
+  * Water quality measurement and risk notification system for school cafeterias.
+  * Shower filter replacement timing(schedule) notification system.
