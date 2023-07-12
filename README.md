@@ -25,17 +25,17 @@ Approximately **46%** of the population in India is suffering from water polluti
 * 2023.05.16 ∼ 2023.07.31
 
 ### Team members
-- **Gyuwon Jung**
+- **Jung Gyuwon**
   - Kyungpook National University, School of Computer Science and Engineering. Hardware build-up
-- **Seonju Hong**
+- **Hong Seonju**
   - Kyungpook National University, School of Computer Science and Engineering. Hardware build-up
-- **Gyuwon Lee**
+- **Lee Gyuwon**
   - Kyungpook National University, School of Computer Science and Engineering. Front-End
-- **Jooyeon Lee**
+- **Lee Jooyeon**
   - Kyungpook National University, School of Computer Science and Engineering. Front-End
-- **Taegon Lee**
+- **Lee Taegon**
   - Kyungpook National University, School of Computer Science and Engineering. Back-End / Server construction
-- **Heonjae Kim**
+- **Kim Heonjae**
   - Kyungpook National University, Department of Statistics. Project Manager
 
 ## Getting Started Guide
