@@ -15,15 +15,15 @@
 - [Key features](#key-features)
 - [Workflow](#workflow)
 - [Expectation](#expectation)
-  - [Public Utilization](#public-utilization)
-  - [Commercial Utilization](#commercial-utilization)
 
 -----------
 
 ## Project information
 
 ### Description
-Approximately **46%** of the population in India is suffering from water pollution. That's why we aim to enhance accessibility to clean water and promote better water management in India.
+A think tank "Science and Environment Center", which proposes policies to the government, points out that on average **200,000 people** die every year from inadequate water supply and contaminated water, and **75%** of India's total population is affected by contaminated water. 하천 내 오염현황을 진단하고 효율적인 오염원 제어를 통한 하천의 수질관리가 효과적으로 이루어지기 위해서도 수질, 유량 모니터링 자료의 축적이 무엇보다 중요하다. That's why we aim to enhance accessibility to clean water and promote better water management in India.
+
+출처: <https://www.newstown.co.kr/news/articleView.html?idxno=329356#google_vignette>
 
 ### Development period
 * 2023.05.16 ∼ 2023.07.31
@@ -103,3 +103,5 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
   * Water quality management and monitoring system for personal aquariums or fish tanks.
   * Water quality measurement and risk notification system for school cafeterias.
   * Shower filter replacement timing(schedule) notification system.
+
+  
