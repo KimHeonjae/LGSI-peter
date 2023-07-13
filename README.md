@@ -27,7 +27,7 @@ A think tank "Science and Environment Center", which proposes policies to the go
 ###### Source: <https://www.newstown.co.kr/news/articleView.html?idxno=329356#google_vignette>
 
 ### Development period
-* 2023.05.16 ∼ 2023.07.31
+* 2023.07.01 ∼ 2023.07.31
 
 ### Team members
 - **Jung Gyuwon**
