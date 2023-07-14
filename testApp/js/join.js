@@ -2,13 +2,13 @@ function showPopup() {
     document.getElementById("popup").style.display = "block";
 }
 function hidePopup() {
-document.getElementById("popup").style.display = "none";
+    document.getElementById("popup").style.display = "none";
 }
 function showPopup_() {
-document.getElementById("popup_").style.display = "block";
+    document.getElementById("popup_").style.display = "block";
 }
 function hidePopup_() {
-document.getElementById("popup_").style.display = "none";
+    document.getElementById("popup_").style.display = "none";
 }
 
 function validatePassword() {
@@ -73,13 +73,22 @@ function showDropdown() {
     }
 }
 
-function showFailurePopup() {
+function showCompletionPopup() {
     document.getElementById("popup_").style.display = "block";
-    var popupMessage = document.querySelector("#popup_ p");
-    popupMessage.textContent = "Failed!";
+    // var popupMessage = document.querySelector("#popup_ p");
+    // popupMessage.textContent = "Completed!";
     var closeButton = document.querySelector("#popup_ .close");
     closeButton.onclick = hidePopup_;
 }
+
+function showFailurePopup(errorMessage) {
+    document.getElementById("popup_").style.display = "block";
+    var popupMessage = document.querySelector("#popup_ p");
+    popupMessage.textContent = errorMessage;
+    var closeButton = document.querySelector("#popup_ .close");
+    closeButton.onclick = hidePopup_;
+}
+
 
 function join() {
     var memberName = document.getElementsByName("memberName")[0].value;
@@ -88,14 +97,12 @@ function join() {
     var dropdown = document.getElementById("dropdownContainer");
     var cityName = dropdown.querySelector("select").value;
 
-
     var userData = {
         memberName: memberName,
         email: email,
         password: password,
         cityName: cityName
     };
-
 
     fetch("http://192.168.201.4:8080/api/members/signup", {
         method: 'POST',
@@ -104,23 +111,28 @@ function join() {
         },
         body: JSON.stringify(userData)
     })
-    // .then(response => response.json())
-    // .then(data => {
-    //     console.log("Result: ", data);
-    // })
-    // .catch(error => {
-    //     console.error('Error:', error);
-    // });
     .then(response => {
         if (response.ok) {
-            showPopup_();
+            showCompletionPopup();
+        } else {
+            throw new Error(response.statusText);
         }
-        else {
-            throw new Error("Request failed");
+    })
+    .then(data => {
+        if (data && data.error) {
+            if (data.error === "ExistenceException") {
+                showFailurePopup("Email already exists!");
+            } else if (data.error === "MethodArgumentNotValidException") {
+                showFailurePopup("Invalid field values!");
+            } else {
+                showFailurePopup("Failed!");
+            }
+        } else {
+            showPopup_();
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        showFailurePopup();
-    })
+        showFailurePopup("Failed!");
+    });
 }
