@@ -1,14 +1,12 @@
-function showPopup() {
-    document.getElementById("popup").style.display = "block";
+function showPopup(message) {
+    var popup = document.getElementById("popup");
+    var popupMessage = popup.querySelector("p");
+    popupMessage.textContent = message;
+    popup.style.display = "block";
+    // document.getElementById("popup").style.display = "block";
 }
 function hidePopup() {
     document.getElementById("popup").style.display = "none";
-}
-function showPopup_() {
-    document.getElementById("popup_").style.display = "block";
-}
-function hidePopup_() {
-    document.getElementById("popup_").style.display = "none";
 }
 
 function validatePassword() {
@@ -73,20 +71,34 @@ function showDropdown() {
     }
 }
 
-function showCompletionPopup() {
-    document.getElementById("popup_").style.display = "block";
-    // var popupMessage = document.querySelector("#popup_ p");
-    // popupMessage.textContent = "Completed!";
-    var closeButton = document.querySelector("#popup_ .close");
-    closeButton.onclick = hidePopup_;
-}
+function dupCheck() {
+    var email = document.getElementsByName("email")[0].value;
 
-function showFailurePopup(errorMessage) {
-    document.getElementById("popup_").style.display = "block";
-    var popupMessage = document.querySelector("#popup_ p");
-    popupMessage.textContent = errorMessage;
-    var closeButton = document.querySelector("#popup_ .close");
-    closeButton.onclick = hidePopup_;
+    var dup_data = document.getElementById("dupMessage").innerText;
+    showPopup(dup_data);
+
+    var userData = {
+        email: email
+    };
+
+    fetch("http://192.168.201.4:8080/api/members/duplicate", {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData)
+    })
+    .then(response => {
+        if (response.status === 200) {
+            document.getElementById("dupMessage").innerText = "Available!";
+            document.getElementsByClassName("bottom-join").disabled = false;
+        }
+        else if (response.status === 400) {
+            document.getElementById("dupMessage").innerText = "Incapable";
+            // document.getElementsByClassName("bottom-join").disabled = true;
+            return;
+        }
+    })
 }
 
 
@@ -96,6 +108,13 @@ function join() {
     var password = document.getElementsByName("password1")[0].value;
     var dropdown = document.getElementById("dropdownContainer");
     var cityName = dropdown.querySelector("select").value;
+
+    if (memberName === "" || email === "" || password === "" || cityName === "") {
+        return;
+    }
+
+    var p_data = document.getElementById("pMessage").innerText;
+    showPopup(p_data);
 
     var userData = {
         memberName: memberName,
@@ -113,26 +132,19 @@ function join() {
     })
     .then(response => {
         if (response.ok) {
-            showCompletionPopup();
-        } else {
-            throw new Error(response.statusText);
+            document.getElementById("pMessage").innerText = "Completed!";
         }
-    })
-    .then(data => {
-        if (data && data.error) {
-            if (data.error === "ExistenceException") {
-                showFailurePopup("Email already exists!");
-            } else if (data.error === "MethodArgumentNotValidException") {
-                showFailurePopup("Invalid field values!");
-            } else {
-                showFailurePopup("Failed!");
+        else {
+            if(response.status === 400) {
+                document.getElementById("pMessage").innerText = "Failed";
             }
-        } else {
-            showPopup_();
         }
     })
+
     .catch(error => {
         console.error('Error:', error);
         showFailurePopup("Failed!");
     });
+
+    document.getElementsByClassName("bottom-join").disabled = true;    
 }

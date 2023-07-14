@@ -20,11 +20,11 @@
                             <input class="textBox" type="text" name="email" placeholder="">
                         </div>
                         <div class="col-2">
-                            <button class="button-dupCheck" onclick="showPopup()">Duplicate<br>check</button>
+                            <button class="button-dupCheck" onclick="dupCheck()">Duplicate<br>check</button>
                             <div id="popup" class="popup">
-                                <p>Available!</p>
+                                <p id="dupMessage"></p>
                                 <button class="close" onclick="hidePopup()">close</button>
-                            </div>     
+                            </div>
                         </div>
                     </div>
 
@@ -43,9 +43,9 @@
             </div>
             
             <button class="bottom-join" type="submit" onclick="join()">Join</button>
-            <div id="popup_" class="popup_">
-                <p id="completionMessage" style="display: none;">Completed!</p>
-                <button class="close" onclick="hidePopup_()">close</button>
+            <div id="popup" class="popup">
+                <p id="pMessage"></p>
+                <button class="close" onclick="hidePopup()">close</button>
             </div>
 
         </div>
