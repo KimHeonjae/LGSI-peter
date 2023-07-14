@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
+body {
+    overflow: auto;
+}
 .slideshow-container {
     max-width: 100%;
     position: relative;
@@ -82,9 +84,11 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 6%;
+    height: 5%;
 }
 .slide-button-login {
-    left: 90%;
+    left: 89%;
 }
 .slide-button-join {
     left: 96%;
@@ -94,11 +98,52 @@
     font-weight: bold;
 }
 
+@media screen and (max-width: 1450px) {
+    .slide-button-login, .slide-button-join {
+        font-size: 13px;
+        left: 96%;
+    }
+    .slide-button-join {
+        top: 11%;
+    }
+}
+@media screen and (max-width: 1349px) {
+    .slide-button-login, .slide-button-join {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .slide-button-login, .slide-button-join {
+        height: 6%;
+        width: 7%;
+    }
+    .slide-button-join {
+        top: 13%;
+    }
+}
+@media screen and (max-width: 1020px) {
+    .slide-button-login, .slide-button-join {
+        left: 94%;
+        width: 9%;
+        padding: 5px 20px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .slide-button-login, .slide-button-join {
+        width: 9%;
+        height: 9%;
+    }
+    .slide-button-join {
+        top: 16%;
+    }
+}
+
 .slide-button-start {
     position: absolute;
     top: 60%;
     left: 50%;
     width: 10%;
+    height: 7%;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
     font-size: 20px;
@@ -108,10 +153,31 @@
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    text-align: center;
+    text-align: middle;
 }
 .slide-button-start:hover {
     color: black;
     font-weight: bold;
+}
+@media screen and (max-width: 1120px) {
+    .slide-button-start {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 977px) {
+    .slide-button-start {
+        height: 8%;
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 876px) {
+    .slide-button-start {
+        height: 10%;
+        width: 10%;
+        font-size: 10px;
+        padding: 10px 10px;
+    }
 }
 
 footer {
@@ -163,18 +229,38 @@ footer {
     margin-top: 20px;
     margin-left: 239px;
 }
-@media screen and (max-width: 550px) {
+
+@media screen and (max-width: 824px) {
     footer {
-        font-size: 11px;
+        font-size: 12px;
+        text-align: center;
+        padding: 15px;
     }
-    #footerMenu {
+    .footerLogo {
+        font-size: 20px;
+    }
+    .footerMenu {
         display: block;
-        word-spacing: 10px;
+        margin: 10px auto;
+        text-align: center;
     }
-    #footerMenu ul li {
-        margin: 0;
+    .footerMenu ul li {
+        display: inline-block;
+        margin: 0 5px;
     }
-    #footerText {
-        margin-left: 0;
+    .footerText {
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .footerMenu ul li::after {
+        content: "";
     }
 }
+
+
+
+
+
+
