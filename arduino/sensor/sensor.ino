@@ -69,11 +69,11 @@ void loop() {
 
   //get first city's turbidity
   //Serial.print("1-4: ");
-  print_value(analogRead(turbidity1) * (5.0 / 1024.0)); // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
+  print_value(5-analogRead(turbidity1) * (5.0 / 1024.0)); // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
 
+  //Serial.println("----------------------------");
   // measure sensor data per 5sec
   delay(2500);  
-
 
   // print city code (1: Delhi)
   Serial.println(1);
@@ -90,7 +90,7 @@ void loop() {
 
   //get second city's turbidity
   //Serial.print("2-4: ");
-  print_value(analogRead(turbidity2) * (5.0 / 1024.0)); // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
+  print_value(5-analogRead(turbidity2) * (5.0 / 1024.0)); // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
 
   //Serial.println("----------------------------");
     
