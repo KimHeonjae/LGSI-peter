@@ -12,9 +12,11 @@
 #define waterlevel1 A0
 #define dhtPin1 A1
 #define ph1 A2
+#define turbidity1 A3
 #define waterlevel2 A4
 #define dhtPin2 A5
 #define ph2 A6
+#define turbidity2 A7
 
 DHT dht1(dhtPin1, DHTTYPE);
 DHT dht2(dhtPin2, DHTTYPE);
@@ -67,7 +69,7 @@ void loop() {
 
   //get first city's turbidity
   //Serial.print("1-4: ");
-  print_value(4);
+  print_value(analogRead(turbidity1) * (5.0 / 1024.0)); // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
 
   // measure sensor data per 5sec
   delay(2500);  
@@ -88,7 +90,7 @@ void loop() {
 
   //get second city's turbidity
   //Serial.print("2-4: ");
-  print_value(5);
+  print_value(analogRead(turbidity2) * (5.0 / 1024.0)); // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
 
   //Serial.println("----------------------------");
     
