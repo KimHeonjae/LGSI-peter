@@ -98,7 +98,7 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 --------
 ## How to connect sensors to Arduino Board
 - Sensor Power: 5V
-- Sensor Data pin: Analog pin
+- Sensor Data pin
   - pH Sensor: A2, A6
   - Turbidity Sensor: A3, A7 
   - Water level Sensor: A0, A4 
