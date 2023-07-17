@@ -48,6 +48,22 @@ A think tank "Science and Environment Center", which proposes policies to the go
 ## Getting Started Guide
 
 ### Requirements
+- Hardware
+  - Type of sensors
+    - UNO R3 SMD --- Atmega328P Board 
+    - Raspberry Pi 4 Model-B with 4 GB RAM (OS: Web_OS)
+    - Water level Sensor (P55508)
+    - Temperature and Humidity Sensor (DHT22)
+    - pH Sensor (PH-4502C)
+    - Turbidity Sensor (TDS-3)
+  - How to connect sensors to Arduino Board
+    - Sensor Power: 5V
+    - Sensor Data pin
+    - pH Sensor: A2, A6
+    - Turbidity Sensor: A3, A7 
+    - Water level Sensor: A0, A4 
+    - Temperature and Humidity Sensor: A1, A5 
+      
 For building and running the application you need:
 Node.js ....
 ......
@@ -70,12 +86,18 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 - web - <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
   <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
 - DB - <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
   <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
   <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
 - Design - <img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
 - Hardware coding - <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
   <img src="https://img.shields.io/badge/c++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white">
+- Tools - <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+  <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+  <img src="https://img.shields.io/badge/notion-000000?style=for-the-badge&logo=notion&logoColor=white">
+  <img src="https://img.shields.io/badge/intellijidea-000000?style=for-the-badge&logo=intellijidea&logoColor=white">
+  <img src="https://img.shields.io/badge/visual studio code-007ACC?style=for-the-badge&logo=visual studio code&logoColor=white">
 
 --------
 
@@ -85,32 +107,9 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
   예시
 <img src="https://github.com/KimHeonjae/LGSI/assets/134956232/0c76d398-1476-48c5-a5a1-56d35f9b4f3b.png" width="600" height="600">
 
-
 - Back-End
   - API address: <https://www.notion.so/API-Document-bf95aca04f6c45c292381999a01e6694?pvs=4>
 
-
-- Hardware
-  - Type of sensors
-    - UNO R3 SMD --- Atmega328P Board 
-    - Raspberry Pi 4 Model-B with 4 GB RAM (OS: Web_OS)
-    - Water level Sensor (P55508)
-    - Temperature and Humidity Sensor (DHT22)
-    - pH Sensor (PH-4502C)
-    - Turbidity Sensor (TDS-3)
-
-  - library to download
-    - DHT sensor library by Adafruit (1.4.4 v)
-      - Download link: https://github.com/adafruit/DHT-sensor-library
-
---------
-## How to connect sensors to Arduino Board
-- Sensor Power: 5V
-- Sensor Data pin
-  - pH Sensor: A2, A6
-  - Turbidity Sensor: A3, A7 
-  - Water level Sensor: A0, A4 
-  - Temperature and Humidity Sensor: A1, A5 
 ---------
 
 ## Key features
