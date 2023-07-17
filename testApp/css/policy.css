@@ -47,7 +47,7 @@ body {
 }
 .frame1 {
     position: absolute;
-    top: 33%;
+    top: 34%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
@@ -59,7 +59,7 @@ body {
 .frame1 p {
     color: #867F7F;
     font-family:'inter', sans-serif;
-    font-size: 15px;
+    font-size: 21px;
     /* font-weight: 600; */
     text-align: left;
     margin-top: 35px;
@@ -78,7 +78,7 @@ body {
 }
 .frame2 {
     position: absolute;
-    top: 33%;
+    top: 34%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
@@ -90,7 +90,7 @@ body {
 .frame2 p {
     color: #867F7F;
     font-family:'inter', sans-serif;
-    font-size: 15px;
+    font-size: 21px;
     /* font-weight: 600; */
     text-align: left;
     margin-top: 35px;
