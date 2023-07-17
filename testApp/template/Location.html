@@ -3,6 +3,7 @@
 <head>
     <link rel = "stylesheet" type = "text/css" href = "../css/Location.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script async defer 
     src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyC-4R_4Zg-_em7DnJ1ysoOsijnPRP_cEs8" defer>
@@ -28,18 +29,6 @@
                 sidebar.classList.toggle('active');
                 mapCanvas.classList.toggle('active');
             }
-            function value(){
-                document.getElementById('time').innerHTML = now;
-                document.getElementById('temp').innerHTML = temperature+" °C";
-                document.getElementById('PH').innerHTML = ph+" pH";
-                document.getElementById('NTU').innerHTML = turb+" NTU";
-                if(waterLevel>=560){
-                    document.getElementById('lv').innerHTML = "High";
-                }
-                else{
-                    document.getElementById('lv').innerHTML = "Low";
-                }
-            }
 
 
             for (var i = 0; i < markers.length; i++) {
@@ -52,37 +41,105 @@
 
                 google.maps.event.addListener(marker, 'click', (function(marker, i) {
                     return function() {
-                        if (i == 0) {
-                            // fetch
-                            // const email = 'aabi05179@gmail.com';
-                            // fetch(`http://192.168.220.1:8080/api/data/get/${encodeURI(email)}`,{
-
-                            fetch(`http://192.168.201.4:8080/api/data/get/taegon1998@gmail.com`,{
+                        if(i==0){
+                            fetch('http://172.20.10.14:8080/api/data/get/taegon1998@gmail.com', {
                                 method: 'GET',
                                 headers:{
                                     'Content-Type': 'application/json',
-                                    'Authorization' : 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0YWVnb24xOTk4QGdtYWlsLmNvbSIsImF1dGgiOiJST0xFX1VTRVIiLCJleHAiOjE2ODk2NjU2MTJ9.w1ajW-rzA96nXwKYhh5H8ZNYtGkGVwgMYRkWxWcHQNU'
-                                    },
-                                })
-
-                            .then(response => {
-                                if(response.ok == 200){
-                                    console.log("completed!");                                    
+                                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0YWVnb24xOTk4QGdtYWlsLmNvbSIsImF1dGgiOiJST0xFX1VTRVIiLCJleHAiOjE2ODk2NjU2MTJ9.w1ajW-rzA96nXwKYhh5H8ZNYtGkGVwgMYRkWxWcHQNU',
+                                }
+                            })
+                            .then(response =>{
+                                if(response.status === 200){
+                                    console.log("response completed!");
+                                    console.log(response);
                                     return response.json();
                                 }
                                 throw new Error('response error');
+                            } )
+                            .then(data=>{
+                                const timestamp = Date.parse(data.now);
+                                const now = new Date(timestamp);
+                                const ph = Math.round(data.ph * 10) / 10;
+                                const temperature = Math.round(data.temperature);
+                                const turbidity = Math.round(data.turbidity * 10) / 10;
+                                const waterLevel = Math.round(data.waterLevel);
+
+                                // console.log(data);
+                                document.getElementById('locationName').innerHTML = "<img src='../img/gps.png' width='3%' height='3%'>Bengaluru";
+                                document.getElementById('time').innerHTML = now.getDate()+"/"+(now.getMonth()+1)+"/"+now.getFullYear()+" "+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+                                document.getElementById('tempId').innerHTML = temperature+" °C";
+                                if(temperature >= 28){
+                                    document.getElementById('tempImg').src = "../img/bad.png";
+                                }
+                                document.getElementById('turbId').innerHTML = turbidity+" NTU";
+                                if(turbidity >= 3){
+                                    document.getElementById('turbImg').src = "../img/bad.png";
+                                }
+                                document.getElementById('phId').innerHTML = ph+" pH";
+                                if(ph <= 5 || ph >= 9){
+                                    document.getElementById('phImg').src = "../img/bad.png";
+                                }
+                                if(waterLevel >= 560) {
+                                    document.getElementById('levelImg').src = "../img/bad.png";
+                                    document.getElementById('levelId').innerHTML = "High";
+                                }
+                                else document.getElementById('levelId').innerHTML = "Low";
+                                show();
                             })
-                            .catch(err => console.log("Error! =>",err))
-                            // show value
-                            document.getElementById('locationName').innerHTML = "<img src='../img/gps.png' width='3%' height='3%'>Bengaluru";
-                            // document.getElementById('temp').innerHTML = "10 °C";
-                            show();
+                            .catch(err => console.log("Error !"));
                         }
-                        else if (i == 1) {
+                        if(i==1){
+                            fetch('http://172.20.10.14:8080/api/data/get/taegon1998@gmail.com', {
+                            method: 'GET',
+                            headers:{
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0YWVnb24xOTk4QGdtYWlsLmNvbSIsImF1dGgiOiJST0xFX1VTRVIiLCJleHAiOjE2ODk2NjU2MTJ9.w1ajW-rzA96nXwKYhh5H8ZNYtGkGVwgMYRkWxWcHQNU',
+                            }
+                        })
+                        .then(response =>{
+                            if(response.status === 200){
+                                console.log("response completed!");
+                                console.log(response);
+                                return response.json();
+                            }
+                            throw new Error('response error');
+                        } )
+                        .then(data=>{
+                            const timestamp = Date.parse(data.now);
+                            const now = new Date(timestamp);
+                            const ph = Math.round(data.ph * 10) / 10;
+                            const temperature = Math.round(data.temperature);
+                            const turbidity = Math.round(data.turbidity * 10) / 10;
+                            const waterLevel = Math.round(data.waterLevel);
+
+                            // console.log(data);
                             document.getElementById('locationName').innerHTML = "<img src='../img/gps.png' width='3%' height='3%'>Delhi";
+                            document.getElementById('time').innerHTML = now.getDate()+"/"+(now.getMonth()+1)+"/"+now.getFullYear()+" "+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+                            document.getElementById('tempId').innerHTML = temperature+" °C";
+                            if(temperature >= 28){
+                                document.getElementById('tempImg').src = "../img/bad.png";
+                            }
+                            document.getElementById('turbId').innerHTML = turbidity+" NTU";
+                            if(turbidity >= 3){
+                                document.getElementById('turbImg').src = "../img/bad.png";
+                            }
+                            document.getElementById('phId').innerHTML = ph+" pH";
+                            if(ph <= 5 || ph >= 9){
+                                document.getElementById('phImg').src = "../img/bad.png";
+                            }
+                            if(waterLevel >= 560) {
+                                document.getElementById('levelImg').src = "../img/bad.png";
+                                document.getElementById('levelId').innerHTML = "High";
+                            }
+                            else document.getElementById('levelId').innerHTML = "Low";
                             show();
+                        })
+                        .catch(err => console.log("Error !"));
                         }
-                    };
+                        
+                    }
+                        
                 })(marker, i));
             }
 
@@ -118,7 +175,7 @@
             <!-- 수정 -->
             <div id="modal" class="Modal">
                 <div class="modalBox">
-                    <img src="../img/howTo.png" width="70%" height="65%">
+                    <img src="../img/howTo.png" width="70%">
                 </div>
             </div>
             
@@ -133,18 +190,18 @@
                     <div class="observe">
                         <p class="name">water temperature</p>
                         <img class="wrap" src="../img/highlight.png">
-                        <div class="value"><p id=temp></p></div>
+                        <div class="value"><p id=tempId></p></div>
                     </div>
                 </div>
                 <!-- pH -->
                 <div class = "gridItem" id="pH">
                     <div class="emoji">
-                        <img id="phImg" src="../img/bad.png">
+                        <img id="phImg" src="../img/good.png">
                     </div>
                     <div class="observe">
                         <p class="name">pH</p>
                         <img class="wrap" src="../img/highlight.png">
-                        <div class="value"><p id="PH"></p></div>
+                        <div class="value"><p id="phId"></p></div>
                     </div>
                 </div>
                 <!-- turbidity -->
@@ -155,18 +212,18 @@
                     <div class="observe">
                         <p class="name">turbidity</p>
                         <img class="wrap" src="../img/highlight.png">
-                        <div class="value"><p id="NTU"></p></div>
+                        <div class="value"><p id="turbId"></p></div>
                     </div>
                 </div>
                 <!-- water level -->
                 <div class = "gridItem" id="level">
                     <div class="emoji">
-                        <img id="lvImg" src="../img/good.png">
+                        <img id="levelImg" src="../img/good.png">
                     </div>
                     <div class="observe">
                         <p class="name">water level</p>
                         <img class="wrap" src="../img/highlight.png">
-                        <div class="value"><p id="lv"></p></div>
+                        <div class="value"><p id="levelId"></p></div>
                     </div>
                 </div>
             </div>
