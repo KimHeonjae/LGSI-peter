@@ -96,11 +96,13 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
       - Download link: https://github.com/adafruit/DHT-sensor-library
 
 --------
-## how to connect sensors to Arduino Board
-- Water level Sensor: A0, A4 (analog pin)
-- Temperature and Humidity Sensor: A1, A5 (analog pin)
-- pH Sensor: A2, A6 (analog pin)
-- Turbidity Sensor: A3, A7 (analog pin)
+## How to connect sensors to Arduino Board
+- Sensor Power: 5V
+- Sensor Data pin: Analog pin
+  - pH Sensor: A2, A6
+  - Turbidity Sensor: A3, A7 
+  - Water level Sensor: A0, A4 
+  - Temperature and Humidity Sensor: A1, A5 
 ---------
 
 ## Key features
