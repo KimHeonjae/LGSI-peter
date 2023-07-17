@@ -51,7 +51,7 @@ function showDropdown() {
         var selectElement = document.createElement("select");
         selectElement.classList.add("dropdown-select");
 
-        var locations = ["Bengaluru", "New Delhi", "Mumbai", "Chennai", "Hyderabad", "Kolkata", "Pune", "Ahmedabad"];
+        var locations = ["Bengaluru", "Delhi", "Mumbai", "Chennai", "Hyderabad", "Kolkata", "Pune", "Ahmedabad"];
 
         for (var i = 0; i < locations.length; i++) {
             var optionElement = document.createElement("option");
@@ -81,7 +81,7 @@ function dupCheck() {
         email: email
     };
 
-    fetch("http://192.168.201.4:8080/api/members/duplicate", {
+    fetch("http://172.20.10.14:8080/api/members/duplicate", {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -123,7 +123,7 @@ function join() {
         cityName: cityName
     };
 
-    fetch("http://192.168.201.4:8080/api/members/signup", {
+    fetch("http://172.20.10.14:8080/api/members/signup", {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -133,6 +133,7 @@ function join() {
     .then(response => {
         if (response.ok) {
             document.getElementById("pMessage").innerText = "Completed!";
+            window.location.href = "login.html";
         }
         else {
             if(response.status === 400) {
