@@ -1,14 +1,12 @@
-function showPopup() {
-    document.getElementById("popup").style.display = "block";
+function showPopup(message) {
+    var popup = document.getElementById("popup");
+    var popupMessage = popup.querySelector("p");
+    popupMessage.textContent = message;
+    popup.style.display = "block";
+    // document.getElementById("popup").style.display = "block";
 }
 function hidePopup() {
-document.getElementById("popup").style.display = "none";
-}
-function showPopup_() {
-document.getElementById("popup_").style.display = "block";
-}
-function hidePopup_() {
-document.getElementById("popup_").style.display = "none";
+    document.getElementById("popup").style.display = "none";
 }
 
 function validatePassword() {
@@ -73,13 +71,36 @@ function showDropdown() {
     }
 }
 
-function showFailurePopup() {
-    document.getElementById("popup_").style.display = "block";
-    var popupMessage = document.querySelector("#popup_ p");
-    popupMessage.textContent = "Failed!";
-    var closeButton = document.querySelector("#popup_ .close");
-    closeButton.onclick = hidePopup_;
+function dupCheck() {
+    var email = document.getElementsByName("email")[0].value;
+
+    var dup_data = document.getElementById("dupMessage").innerText;
+    showPopup(dup_data);
+
+    var userData = {
+        email: email
+    };
+
+    fetch("http://192.168.201.4:8080/api/members/duplicate", {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData)
+    })
+    .then(response => {
+        if (response.status === 200) {
+            document.getElementById("dupMessage").innerText = "Available!";
+            document.getElementsByClassName("bottom-join").disabled = false;
+        }
+        else if (response.status === 400) {
+            document.getElementById("dupMessage").innerText = "Incapable";
+            // document.getElementsByClassName("bottom-join").disabled = true;
+            return;
+        }
+    })
 }
+
 
 function join() {
     var memberName = document.getElementsByName("memberName")[0].value;
@@ -88,6 +109,12 @@ function join() {
     var dropdown = document.getElementById("dropdownContainer");
     var cityName = dropdown.querySelector("select").value;
 
+    if (memberName === "" || email === "" || password === "" || cityName === "") {
+        return;
+    }
+
+    var p_data = document.getElementById("pMessage").innerText;
+    showPopup(p_data);
 
     var userData = {
         memberName: memberName,
@@ -96,7 +123,6 @@ function join() {
         cityName: cityName
     };
 
-
     fetch("http://192.168.201.4:8080/api/members/signup", {
         method: 'POST',
         headers: {
@@ -104,23 +130,21 @@ function join() {
         },
         body: JSON.stringify(userData)
     })
-    // .then(response => response.json())
-    // .then(data => {
-    //     console.log("Result: ", data);
-    // })
-    // .catch(error => {
-    //     console.error('Error:', error);
-    // });
     .then(response => {
         if (response.ok) {
-            showPopup_();
+            document.getElementById("pMessage").innerText = "Completed!";
         }
         else {
-            throw new Error("Request failed");
+            if(response.status === 400) {
+                document.getElementById("pMessage").innerText = "Failed";
+            }
         }
     })
+
     .catch(error => {
         console.error('Error:', error);
-        showFailurePopup();
-    })
+        showFailurePopup("Failed!");
+    });
+
+    document.getElementsByClassName("bottom-join").disabled = true;    
 }
