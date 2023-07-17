@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" type = "text/css" href = "faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>FAQs</title>
+</head>
+<body>
+    <h1 class = "title">FAQ</h1>
+    <div class= "accordion">
+        <div class = "contentBx">
+            <div class = "label">Why is my account associated with a city?</div>
+            <div class = "content">
+                <p>
+                    PURESOME measures the overall water contamination by monitoring factors such as temperature, 
+                    l, pH and water level. It utilizes the users’ location information to determine whether clean water is available in ther vicinity and provides alerts through notification to inform them about the availability of clean water.
+                </p>
+            </div>
+        </div>
+        <div class = "contentBx">
+            <div class = "label">If my location has changed due to reasons like moving, how can I update  my location?</div>
+            <div class = "content">
+                <p>
+                    If your location has changed, you can update it by accessing the MyPage section and updating your location information. Once you update your location, it will be changed to the new one.
+                </p>
+            </div>
+        </div>
+        <div class = "contentBx">
+            <div class = "label">How does PURESOME protect my privacy and keep my information secure?</div>
+            <div class = "content">
+                <p>
+                    We're constantly working to ensure strong security, protect your privacy, and make PURESOME even more effective and efficient for you. We built easy-to-use privacy and security tools like 2-step verification. So when it comes to the information you share with PURESOME, you're in control.
+                </p>
+            </div>
+        </div>
+        <div class = "contentBx">
+            <div class = "label"> I'm curious about the process of data deletion and whether data completely disappears when deleted.</div>
+            <div class = "content">
+                <p>
+                    Each PURESOME storage system from which data gets deleted has its own detailed process for safe and complete deletion. This might involve repeated passes through the system to confirm all data has been deleted, or breif delays to allow for recovery from mistakes. As a result, deletion could sometimes take longer when extra time is needed to safely and completely delete the data.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const accordion = document.getElementsByClassName('contentBx');
+        for(i = 0; i<accordion.length; i++){
+            accordion[i].addEventListener('click', function(){
+                this.classList.toggle('active');
+            })
+        }
+    </script>
+
+    <footer>
+        <div class="footerContent">
+            <div class="footerLogo">
+                PURESOME
+            </div> 
+            <div class="footerMenu">
+                <ul>
+                    <li><a href="#">Send Feedback</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footerText">
+                Embassy Tech Square, Cessna Business Park Internal Rd, Kaverappa Layout,<br>
+                Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560103<br>
+                Copyright@2023 PURESOME All Right Reserved
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

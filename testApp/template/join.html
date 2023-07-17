@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>join</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/join.css" />
+    <script type="text/javascript" src="../js/join.js"></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Join</h1>
+            <div class="overlay">
+                <div class="frame">
+                    <h3>Name</h3>
+                    <input class="textBox" type="text" name="memberName" placeholder="">
+                    <h3>Email</h3>
+                    <div class="col-d">
+                        <div class="col-1">
+                            <input class="textBox" type="text" name="email" placeholder="">
+                        </div>
+                        <div class="col-2">
+                            <button class="button-dupCheck" onclick="dupCheck()">Duplicate<br>check</button>
+                            <div id="popup" class="popup">
+                                <p id="dupMessage"></p>
+                                <button class="close" onclick="hidePopup()">close</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Password</h3>
+                    <input class="textBox" type="password1" name="password1" id="passwordInput1" placeholder="" oninput="validatePassword()">
+                    <p id="passwordValidationMessage" style="color:rgba(255,0,0,0.54); font-size:14px;"></p>
+                    
+                    <h3>Confirm Password</h3>
+                    <input class="textBox" type="password2" name="password2" id="passwordInput2" placeholder="" oninput="DoubleCheckPassword()">
+                    <p id="passwordDoubleCheckMessage"  style="font-size:14px;"></p>
+                    
+                    <h3>Location</h3>
+                    <button class="button-selectLocation" onclick="showDropdown()">Select Location</button>
+                    <div id="dropdownContainer"></div>
+                </div>
+            </div>
+            
+            <button class="bottom-join" type="submit" onclick="join()">Join</button>
+            <div id="popup" class="popup">
+                <p id="pMessage"></p>
+                <button class="close" onclick="hidePopup()">close</button>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="footerContent">
+            <div class="footerLogo">
+                PURESOME
+            </div> 
+            <div class="footerMenu">
+                <ul>
+                    <li><a>Send Feedback</a></li>
+                    <li><a href="policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footerText">
+                Embassy Tech Square, Cessna Business Park Internal Rd, Kaverappa Layout,<br>
+                Kadubeesanahalli, Marathahalli, Bengaluru, Karnataka 560103<br>
+                Copyright@2023 PURESOME All Right Reserved
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

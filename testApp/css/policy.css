@@ -1,161 +1,190 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            background-color: #D7F0EA;
-            background-size: cover;
-            text-align: center;
-        }
-        .container h1 {
-            color: #867F7F;
-            font-family:'inter', sans-serif;
-            font-size: 40px;
-            font-weight: 900;
-            text-align: center;
-            margin: 0;
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .frame-hr {
-            position: absolute;
-            top: 15%;
-            /* transform: translate(-50%, -50%); */
-            width: 100%;
-            height: 10px;
-            border: none;
-            opacity: 1; /*0.5 -> 1*/
-            text-align: center;
-        }
-        .overlay1 {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60%;
-            height: 40%;
-            background-color: rgba(255,255,255,0.7);
-            border-radius: 20px;
-            border: 1px solid white;
-        }
-        .frame1 {
-            position: absolute;
-            top: 33%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            height: 70%;
-            border: none;
-            opacity: 1; /*0.5 -> 1*/
-            text-align: center;
-        }
-        .frame1 p {
-            color: #867F7F;
-            font-family:'inter', sans-serif;
-            font-size: 15px;
-            /* font-weight: 600; */
-            text-align: left;
-            margin-top: 35px;
-        }
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #D7F0EA;
+    background-size: cover;
+    text-align: center;
+}
+.container h1 {
+    color: #867F7F;
+    font-family:'inter', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.frame-hr {
+    position: absolute;
+    top: 15%;
+    /* transform: translate(-50%, -50%); */
+    width: 100%;
+    height: 10px;
+    border: none;
+    opacity: 1; /*0.5 -> 1*/
+    text-align: center;
+}
+.overlay1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 40%;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 20px;
+    border: 1px solid white;
+}
+.frame1 {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 70%;
+    border: none;
+    opacity: 1; /*0.5 -> 1*/
+    text-align: center;
+}
+.frame1 p {
+    color: #867F7F;
+    font-family:'inter', sans-serif;
+    font-size: 15px;
+    /* font-weight: 600; */
+    text-align: left;
+    margin-top: 35px;
+}
 
-        .overlay2 {
-            position: absolute;
-            top: 79%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60%;
-            height: 32%;
-            background-color: rgba(255,255,255,0.7);
-            border-radius: 20px;
-            border: 1px solid white;
-        }
-        .frame2 {
-            position: absolute;
-            top: 33%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            height: 70%;
-            border: none;
-            opacity: 1; /*0.5 -> 1*/
-            text-align: center;
-        }
-        .frame2 p {
-            color: #867F7F;
-            font-family:'inter', sans-serif;
-            font-size: 15px;
-            /* font-weight: 600; */
-            text-align: left;
-            margin-top: 35px;
-        }
+.overlay2 {
+    position: absolute;
+    top: 79%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 32%;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 20px;
+    border: 1px solid white;
+}
+.frame2 {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 70%;
+    border: none;
+    opacity: 1; /*0.5 -> 1*/
+    text-align: center;
+}
+.frame2 p {
+    color: #867F7F;
+    font-family:'inter', sans-serif;
+    font-size: 15px;
+    /* font-weight: 600; */
+    text-align: left;
+    margin-top: 35px;
+}
 
-        footer {
-            background-color: white;
-            padding: 20px;
-            padding-left: 40px;
-            font-family:'inter', sans-serif;
-            font-size: 15px;
-        }
-        .footerLogo {
-            display: inline-block;
-            font-size: 30px;
-            font-weight: 900;
-            color: gray;
-        }
-        .footerMenu {
-            display: inline-block;
-            margin-left: 40px;
-        }
-        .footerMenu ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .footerMenu ul li {
-            display: inline-block;
-            margin: 0 30px;
-        }
-        .footerMenu ul li::after {
-            content: "|";
-            float: right;
-            color: #ccc;
-            margin-right: -37px;
-        }
-        .footerMenu ul li:last-child:after {
-            content: "";
-        }
-        .footerMenu ul li a {
-            color: gray;
-            text-decoration: none;
-        }
-        .footerMenu ul li a:hover {
-            color: black;
-            font-weight: bold;
-        }
-        .footerText {
-            color: #867F7F;
-            margin-top: 20px;
-            margin-left: 239px;
-        }
-        @media screen and (max-width: 550px) {
-            footer {
-                font-size: 11px;
-            }
-            #footerMenu {
-                display: block;
-                word-spacing: 10px;
-            }
-            #footerMenu ul li {
-                margin: 0;
-            }
-            #footerText {
-                margin-left: 0;
-            }
-        }
+@media screen and (max-width: 1386px) {
+    .overlay1, .overlay2 {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1013px) {
+    .frame1 p, .frame2 p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 852px) {
+    .frame1 p, .frame2 p {
+        font-size: 13px;
+    }
+}
+
+footer {
+    background-color: white;
+    padding: 20px;
+    padding-left: 40px;
+    font-family:'inter', sans-serif;
+    font-size: 15px;
+}
+.footerLogo {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 900;
+    color: gray;
+}
+.footerMenu {
+    display: inline-block;
+    margin-left: 40px;
+}
+.footerMenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footerMenu ul li {
+    display: inline-block;
+    margin: 0 30px;
+}
+.footerMenu ul li::after {
+    content: "|";
+    float: right;
+    color: #ccc;
+    margin-right: -37px;
+}
+.footerMenu ul li:last-child:after {
+    content: "";
+}
+.footerMenu ul li a {
+    color: gray;
+    text-decoration: none;
+}
+.footerMenu ul li a:hover {
+    color: black;
+    font-weight: bold;
+}
+.footerText {
+    color: #867F7F;
+    margin-top: 20px;
+    margin-left: 239px;
+}
+@media screen and (max-width: 824px) {
+    footer {
+        font-size: 12px;
+        text-align: center;
+        padding: 15px;
+    }
+    .footerLogo {
+        font-size: 20px;
+    }
+    .footerMenu {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .footerMenu ul li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .footerText {
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .footerMenu ul li::after {
+        content: "";
+    }
+}
