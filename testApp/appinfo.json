@@ -1,11 +1,11 @@
 {
   "id": "com.test.app",
   "version": "1.0.0",
-  "vendor": "My Company",
+  "vendor": "puresome",
   "type": "web",
   "main": "index.html",
-  "title": "test app",
-  "icon": "icon.png",
+  "title": "PURESOME",
+  "icon": "logo.png",
   "requiredPermissions": [
     "time.query",
     "activity.operation"
