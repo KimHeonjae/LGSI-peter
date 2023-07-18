@@ -38,6 +38,10 @@ body {
 }
 .frame {
     position: absolute;
+<<<<<<< HEAD
+    /* top: 40%; */
+=======
+>>>>>>> 5acd02c614859b8f880a1450e259f45612497339
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -84,6 +88,18 @@ body {
     border: none;
     opacity: 1;
     text-align: center;
+<<<<<<< HEAD
+}
+/*******/
+.col-1 {
+    /* display: inline-block; */
+    float: left;
+    width: 70%;
+    vertical-align: top;
+    /* margin-right: 4%; */
+    margin-left: 0;
+=======
+>>>>>>> 5acd02c614859b8f880a1450e259f45612497339
 }
 
 .bottom-login, .bottom-join {
@@ -197,6 +213,11 @@ footer {
     }
 }
 
+<<<<<<< HEAD
+/*팝업*/
+
+=======
+>>>>>>> 5acd02c614859b8f880a1450e259f45612497339
 .popup {
     display: none;
     position: fixed;
