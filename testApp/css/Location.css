@@ -5,7 +5,7 @@
 }
 #mapCanvas{
     float : right;
-    height: 700px;
+    height: 100vh;
     width : 100%;
 }
 #sidebar{
@@ -31,6 +31,7 @@
     margin-bottom:7%;
     width:100%;
     height:100%;
+    background-color: white;
 }
 .frame{
     position: relative;
@@ -43,6 +44,7 @@
     border: none;
     opacity: 1;
     text-align: center;
+    background-color: white;
 }
 .frame #time{
     margin-top: 1%;
@@ -99,7 +101,6 @@
     padding:0;
     column-gap: 15px;
     row-gap : 15px;
-    /* background : gray; */
 }
 .gridItem{
     width:100%;
@@ -182,7 +183,7 @@
     grid-column: 2 / 3;
 }
 
-#turbidity {
+#turb {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
 }

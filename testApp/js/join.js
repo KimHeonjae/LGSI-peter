@@ -51,7 +51,7 @@ function showDropdown() {
         var selectElement = document.createElement("select");
         selectElement.classList.add("dropdown-select");
 
-        var locations = ["Bengaluru", "New Delhi", "Mumbai", "Chennai", "Hyderabad", "Kolkata", "Pune", "Ahmedabad"];
+        var locations = ["Bengaluru", "Delhi", "Mumbai", "Chennai", "Hyderabad", "Kolkata", "Pune", "Ahmedabad"];
 
         for (var i = 0; i < locations.length; i++) {
             var optionElement = document.createElement("option");
@@ -133,6 +133,7 @@ function join() {
     .then(response => {
         if (response.ok) {
             document.getElementById("pMessage").innerText = "Completed!";
+            window.location.href = "login.html";
         }
         else {
             if(response.status === 400) {

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel = "stylesheet" type = "text/css" href = "Location.css">
+    <link rel = "stylesheet" type = "text/css" href = "../css/Location.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script async defer 
     src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyC-4R_4Zg-_em7DnJ1ysoOsijnPRP_cEs8" defer>
@@ -10,16 +11,22 @@
 
     <script>
         function initMap(){
-            const myLatLng = {lat: 12.98044088592995, lng : 77.59497561005846};
+            const myLatLng = {lat: 23.06407712295488, lng : 79.41268576800869};
 
             const map = new google.maps.Map(document.getElementById("mapCanvas"),{
-                zoom : 4,
+                zoom : 5,
                 center : myLatLng
             });
 
             var markers=[
                 ['Bengaluru', 12.98044088592995, 77.59497561005846],
-                ['Delhi', 28.68362419029803, 77.2341716673886]
+                ['Delhi', 28.68362419029803, 77.2341716673886],
+                ['Pune', 18.31728759524245, 73.65727927476328],
+                ['Mumbai', 19.374006003810653, 73.06224572900297],
+                ['Chennai', 13.538065300822781, 80.27413619843371],
+                ['Hyderabad', 17.41532262772166, 77.70032756699213],
+                ['Kolkata', 22.57694121932357, 88.36554393825934],
+                ['Ahmedabad', 23.334338617973383, 72.61756861373328]
             ]
 
             function show() {
@@ -40,15 +47,105 @@
 
                 google.maps.event.addListener(marker, 'click', (function(marker, i) {
                     return function() {
-                        if (i == 0) {
-                            document.getElementById('locationName').innerHTML = "<img src='gps.png' width='3%' height='3%'>Bengaluru";
-                            show();
-                        } 
-                        else if (i == 1) {
-                            document.getElementById('locationName').innerHTML = "<img src='gps.png' width='3%' height='3%'>Delhi";
-                            show();
+                        if(i==0){
+                            fetch('http://192.168.201.4:8080/api/data/get/Bengaluru', {
+                                method: 'GET',
+                                headers:{
+                                    'Content-Type': 'application/json',
+                                    'Authorization' : 'Bearer ' + localStorage.getItem("accessToken"),
+                                }
+                            })
+                            .then(response =>{
+                                if(response.status === 200){
+                                    console.log("response completed!");
+                                    console.log(response);
+                                    return response.json();
+                                }
+                                throw new Error('response error');
+                            } )
+                            .then(data=>{
+                                const timestamp = Date.parse(data.now);
+                                const now = new Date(timestamp);
+                                const ph = Math.round(data.ph * 10) / 10;
+                                const temperature = Math.round(data.temperature);
+                                const turbidity = Math.round(data.turbidity * 10) / 10;
+                                const waterLevel = Math.round(data.waterLevel);
+
+                                console.log(data);
+                                document.getElementById('locationName').innerHTML = "<img src='../img/gps.png' width='3%' height='3%'>Bengaluru";
+                                document.getElementById('time').innerHTML = now.getDate()+"/"+(now.getMonth()+1)+"/"+now.getFullYear()+" "+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+                                document.getElementById('tempId').innerHTML = temperature+" °C";
+                                if(temperature >= 28){
+                                    document.getElementById('tempImg').src = "../img/bad.png";
+                                }
+                                document.getElementById('turbId').innerHTML = turbidity+" NTU";
+                                if(turbidity >= 3){
+                                    document.getElementById('turbImg').src = "../img/bad.png";
+                                }
+                                document.getElementById('phId').innerHTML = ph+" pH";
+                                if(ph <= 5 || ph >= 9){
+                                    document.getElementById('phImg').src = "../img/bad.png";
+                                }
+                                if(waterLevel >= 560) {
+                                    document.getElementById('levelImg').src = "../img/bad.png";
+                                    document.getElementById('levelId').innerHTML = "High";
+                                }
+                                else document.getElementById('levelId').innerHTML = "Low";
+                                show();
+                            })
+                            .catch(err => console.log("Error !"));
                         }
-                    };
+                        if(i==1){
+                            fetch('http://192.168.201.4:8080/api/data/get/Delhi', {
+                            method: 'GET',
+                            headers:{
+                                'Content-Type': 'application/json',
+                                'Authorization' : 'Bearer ' + localStorage.getItem("accessToken"),
+                            }
+                        })
+                        .then(response =>{
+                            if(response.status === 200){
+                                console.log("response completed!");
+                                console.log(response);
+                                return response.json();
+                            }
+                            throw new Error('response error');
+                        } )
+                        .then(data=>{
+                            const timestamp = Date.parse(data.now);
+                            const now = new Date(timestamp);
+                            const ph = Math.round(data.ph * 10) / 10;
+                            const temperature = Math.round(data.temperature);
+                            const turbidity = Math.round(data.turbidity * 10) / 10;
+                            const waterLevel = Math.round(data.waterLevel);
+
+                            // console.log(data);
+                            document.getElementById('locationName').innerHTML = "<img src='../img/gps.png' width='3%' height='3%'>Delhi";
+                            document.getElementById('time').innerHTML = now.getDate()+"/"+(now.getMonth()+1)+"/"+now.getFullYear()+" "+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+                            document.getElementById('tempId').innerHTML = temperature+" °C";
+                            if(temperature >= 28){
+                                document.getElementById('tempImg').src = "../img/bad.png";
+                            }
+                            document.getElementById('turbId').innerHTML = turbidity+" NTU";
+                            if(turbidity >= 3){
+                                document.getElementById('turbImg').src = "../img/bad.png";
+                            }
+                            document.getElementById('phId').innerHTML = ph+" pH";
+                            if(ph <= 5 || ph >= 9){
+                                document.getElementById('phImg').src = "../img/bad.png";
+                            }
+                            if(waterLevel >= 560) {
+                                document.getElementById('levelImg').src = "../img/bad.png";
+                                document.getElementById('levelId').innerHTML = "High";
+                            }
+                            else document.getElementById('levelId').innerHTML = "Low";
+                            show();
+                        })
+                        .catch(err => console.log("Error !"));
+                        }
+                        
+                    }
+                        
                 })(marker, i));
             }
 
@@ -65,74 +162,74 @@
     <div id = "sidebar">
         <div class = "content">
             <div class="frame">
-                <h1 id="locationName"><img src="gps.png" width="5%" height="5%"></h1>
+                <h1 id="locationName"><img src="../img/gps.png" width="5%" height="5%"></h1>
                 <p id="time"></p>
-                <script type="text/javascript">
+                <!-- <script type="text/javascript">
                     function locale() {
                         return new Date().toLocaleString('en-IN');
                     } 
                     document.getElementById( 'time' ).innerHTML = locale(); 
                     setInterval ( function() { document.getElementById("time").innerHTML = locale(); } , 1000 );
     
-                </script>
+                </script> -->
     
             </div>
-            <script src="time.js"></script>
+            <script src="../js/time.js"></script>
             <button id="Help">
-                <img class="help" src="help.png">
+                <img class="help" src="../img/help.png">
             </button>
             <!-- 수정 -->
             <div id="modal" class="Modal">
                 <div class="modalBox">
-                    <img src="how.png">
+                    <img src="../img/howTo.png" width="70%">
                 </div>
             </div>
             
-            <script src="content.js"></script>
+            <script src="../js/content.js"></script>
             
             <div class = "grid">
                 <!-- temperature -->
                 <div class = "gridItem" id="temper">
                     <div class="emoji">
-                        <img src="good.png">
+                        <img id="tempImg" src="../img/good.png">
                     </div>
                     <div class="observe">
                         <p class="name">water temperature</p>
-                        <img class="wrap" src="highlight.png">
-                        <div class="value"><p>10 °C</p></div>
+                        <img class="wrap" src="../img/highlight.png">
+                        <div class="value"><p id=tempId></p></div>
                     </div>
                 </div>
                 <!-- pH -->
                 <div class = "gridItem" id="pH">
                     <div class="emoji">
-                        <img src="bad.png">
+                        <img id="phImg" src="../img/good.png">
                     </div>
                     <div class="observe">
                         <p class="name">pH</p>
-                        <img class="wrap" src="highlight.png">
-                        <div class="value"><p>7 pH</p></div>
+                        <img class="wrap" src="../img/highlight.png">
+                        <div class="value"><p id="phId"></p></div>
                     </div>
                 </div>
                 <!-- turbidity -->
                 <div class = "gridItem" id="turbidity">
                     <div class="emoji">
-                        <img src="good.png">
+                        <img id="turbImg" src="../img/good.png">
                     </div>
                     <div class="observe">
                         <p class="name">turbidity</p>
-                        <img class="wrap" src="highlight.png">
-                        <div class="value"><p>0.05 NTU</p></div>
+                        <img class="wrap" src="../img/highlight.png">
+                        <div class="value"><p id="turbId"></p></div>
                     </div>
                 </div>
                 <!-- water level -->
                 <div class = "gridItem" id="level">
                     <div class="emoji">
-                        <img src="good.png">
+                        <img id="levelImg" src="../img/good.png">
                     </div>
                     <div class="observe">
                         <p class="name">water level</p>
-                        <img class="wrap" src="highlight.png">
-                        <div class="value"><p>High</p></div>
+                        <img class="wrap" src="../img/highlight.png">
+                        <div class="value"><p id="levelId"></p></div>
                     </div>
                 </div>
             </div>
