@@ -12,6 +12,7 @@
   - [Installation](#installation)
 - [Stacks](#stacks)
 - [System Architecture](#system-architecture)
+- [Entity Relationship Diagram(ERD)](#entity-relationship-diagram)
 - [Screen configuration / API address](#screen-configuration-/-api-address)
 - [Key features](#key-features)
 - [Workflow](#workflow)
@@ -115,9 +116,9 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 
 --------
 
-## Entity Relationship Diagram(ERD)
+## Entity Relationship Diagram
 
-<img src="https://github.com/KimHeonjae/LGSI-peter/assets/134956232/b589ddd4-6d07-45f2-9c18-db5e66a6b207.png" width="700" height="400">
+<img src="https://github.com/KimHeonjae/LGSI-peter/assets/134956232/6de39f27-0c61-411a-9d60-161069dbb12b.png" width="700" height="400">
 
 --------
 
