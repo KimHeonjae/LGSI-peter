@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-* {
-    font-family: 'inter', sans-serif;
-}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,19 +8,19 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url("../img/back.jpg") no-repeat center center fixed;
+    background: url("../img/back2.jpg") no-repeat center center fixed;
     background-size: cover;
     text-align: center;
 }
 .container h1 {
     color: rgba(0,0,0,0.54);
     font-family:'inter', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 900;
     text-align: center;
     margin: 0;
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -33,21 +31,17 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40%;
-    height: 70%;
+    height: 40%;
     background-color: rgba(217, 217, 217, 0.5);
     border-radius: 20px;
     border: 1px solid white;
 }
 .frame {
     position: absolute;
-<<<<<<< HEAD
-=======
-    /* top: 40%; */
->>>>>>> b163056e156010d0fc724d1a0e6aaf47b0a16c48
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 70%;
     height: 70%;
     border: none;
     opacity: 1; /*0.5 -> 1*/
@@ -56,7 +50,7 @@ body {
 .frame h3 {
     color: #867F7F;
     font-family:'inter', sans-serif;
-    font-size: 17px;
+    font-size: 20px;
     text-align: left;
     /* margin-top: 30px; */
 }
@@ -70,12 +64,16 @@ body {
     outline: none;
 }
 
-.col-d {
-    display: inline-block;
-    width: 100%;
+
+@media screen and (max-width: 900px) { 
+    .overlay h1 {
+        font-size: 20px;
+    }
+    .frame h3 {
+        font-size: 15px;
+    }
 }
 
-<<<<<<< HEAD
 .frame2 {
     position: absolute;
     top: 80%;
@@ -86,97 +84,29 @@ body {
     border: none;
     opacity: 1;
     text-align: center;
-=======
-/*******/
-.col-1 {
-    /* display: inline-block; */
-    float: left;
-    width: 70%;
-    vertical-align: top;
-    /* margin-right: 4%; */
-    margin-left: 0;
->>>>>>> b163056e156010d0fc724d1a0e6aaf47b0a16c48
 }
-.col-2 {
-    /* display: inline-block; */
-    float: right;
-    width: 24%;
-    vertical-align: top;
-    margin-right: 0;
-    position: relative;
-}
-.button-dupCheck {
+
+.bottom-login, .bottom-join {
     background-color: rgba(255,255,255,0.7);
     color: #867F7F;
     border-radius: 30px;
     border: none;
     width: 100%;
-    height: auto;
+    height: 25%;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+    text-align: center;
 }
-.button-dupCheck:hover {
-    color: black;
+.bottom-login {
+    margin-top: 8%;
 }
-/********/
-
-.button-selectLocation {
-    width: 100%;
-    height: 30px;
-    border: none;
-    border-radius: 10px;
-    color: #867F7F;
-    background-color: rgba(255,255,255,0.7);
-    font-size: 15px;
-    cursor: pointer;
-}
-.button-selectLocation:hover {
-    color: black;
-}
-.dropdown-select {
-    width: 100%;
-    height: 30px;
-    padding: 5px;
-    font-size: 14px;
-    border-radius: 10px;
-    color: #867F7F;
-    background-color: rgba(255,255,255,0.7);
-    overflow-y: auto;
-    }          
-
 .bottom-join {
-    background-color: rgba(255,255,255,0.7);
-    color: #867F7F;
-    border-radius: 30px;
-    border: none;
-    position: absolute;
-    top: 93%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40%;
-    height: 6%;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    /* margin-top: 8%; */
+    margin-top: 4%;
 }
-.bottom-join:hover {
+.bottom-login:hover, .bottom-join:hover {
     color: black;
 }
-@media screen and (max-width: 1236px) {
-    .button-dupCheck {
-        font-size: 12px;
-    }
-}
-@media screen and (max-width: 1076px) {
-    .frame {
-        width: 80%;
-    }
-    .button-dupCheck {
-        font-size: 10px;
-    }
-}
-
 @media screen and (max-width: 640x) {
     .container h1 {
         font-size: 30px;
@@ -195,6 +125,7 @@ footer {
     padding-left: 40px;
     font-family:'inter', sans-serif;
     font-size: 15px;
+    /* text-align: center; */
 }
 .footerLogo {
     display: inline-block;
@@ -266,14 +197,10 @@ footer {
     }
 }
 
-<<<<<<< HEAD
-=======
-/*팝업*/
->>>>>>> b163056e156010d0fc724d1a0e6aaf47b0a16c48
 .popup {
     display: none;
     position: fixed;
-    top: 50%;
+    top: -50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 200px;
@@ -304,4 +231,3 @@ footer {
     cursor: pointer;
     border: none;
 }
-/*****/
