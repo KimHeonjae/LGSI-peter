@@ -52,7 +52,7 @@
                                 method: 'GET',
                                 headers:{
                                     'Content-Type': 'application/json',
-                                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0YWVnb25AZ21haWwuY29tIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTY4OTc0NDc4NH0.2dvdlfc1RU61cnmw0CUm5k6rEA5-ODm-m2OhmN9cmgE',
+                                    'Authorization' : 'Bearer ' + localStorage.getItem("accessToken"),
                                 }
                             })
                             .then(response =>{
@@ -71,7 +71,7 @@
                                 const turbidity = Math.round(data.turbidity * 10) / 10;
                                 const waterLevel = Math.round(data.waterLevel);
 
-                                // console.log(data);
+                                console.log(data);
                                 document.getElementById('locationName').innerHTML = "<img src='../img/gps.png' width='3%' height='3%'>Bengaluru";
                                 document.getElementById('time').innerHTML = now.getDate()+"/"+(now.getMonth()+1)+"/"+now.getFullYear()+" "+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
                                 document.getElementById('tempId').innerHTML = temperature+" °C";
@@ -100,7 +100,7 @@
                             method: 'GET',
                             headers:{
                                 'Content-Type': 'application/json',
-                                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYWJpMDUxNzlAZ21haWwuY29tIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTY4OTc0NDgxNH0.BzINvhp5pCnyaIxEDpaL8yndqus5gmKFH6IH8e6Nlfc',
+                                'Authorization' : 'Bearer ' + localStorage.getItem("accessToken"),
                             }
                         })
                         .then(response =>{
