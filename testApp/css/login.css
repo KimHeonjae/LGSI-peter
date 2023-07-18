@@ -40,10 +40,7 @@ body {
 }
 .frame {
     position: absolute;
-<<<<<<< HEAD
-=======
     /* top: 40%; */
->>>>>>> b163056e156010d0fc724d1a0e6aaf47b0a16c48
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -75,7 +72,6 @@ body {
     width: 100%;
 }
 
-<<<<<<< HEAD
 .frame2 {
     position: absolute;
     top: 80%;
@@ -86,7 +82,7 @@ body {
     border: none;
     opacity: 1;
     text-align: center;
-=======
+}
 /*******/
 .col-1 {
     /* display: inline-block; */
@@ -95,7 +91,6 @@ body {
     vertical-align: top;
     /* margin-right: 4%; */
     margin-left: 0;
->>>>>>> b163056e156010d0fc724d1a0e6aaf47b0a16c48
 }
 .col-2 {
     /* display: inline-block; */
@@ -266,10 +261,8 @@ footer {
     }
 }
 
-<<<<<<< HEAD
-=======
 /*팝업*/
->>>>>>> b163056e156010d0fc724d1a0e6aaf47b0a16c48
+
 .popup {
     display: none;
     position: fixed;

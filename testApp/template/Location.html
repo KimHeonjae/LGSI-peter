@@ -11,16 +11,22 @@
 
     <script>
         function initMap(){
-            const myLatLng = {lat: 12.98044088592995, lng : 77.59497561005846};
+            const myLatLng = {lat: 23.06407712295488, lng : 79.41268576800869};
 
             const map = new google.maps.Map(document.getElementById("mapCanvas"),{
-                zoom : 4,
+                zoom : 5,
                 center : myLatLng
             });
 
             var markers=[
                 ['Bengaluru', 12.98044088592995, 77.59497561005846],
-                ['Delhi', 28.68362419029803, 77.2341716673886]
+                ['Delhi', 28.68362419029803, 77.2341716673886],
+                ['Pune', 18.31728759524245, 73.65727927476328],
+                ['Mumbai', 19.374006003810653, 73.06224572900297],
+                ['Chennai', 13.538065300822781, 80.27413619843371],
+                ['Hyderabad', 17.41532262772166, 77.70032756699213],
+                ['Kolkata', 22.57694121932357, 88.36554393825934],
+                ['Ahmedabad', 23.334338617973383, 72.61756861373328]
             ]
 
             function show() {
@@ -42,11 +48,11 @@
                 google.maps.event.addListener(marker, 'click', (function(marker, i) {
                     return function() {
                         if(i==0){
-                            fetch('http://172.20.10.14:8080/api/data/get/taegon1998@gmail.com', {
+                            fetch('http://192.168.201.4:8080/api/data/get/Bengaluru', {
                                 method: 'GET',
                                 headers:{
                                     'Content-Type': 'application/json',
-                                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0YWVnb24xOTk4QGdtYWlsLmNvbSIsImF1dGgiOiJST0xFX1VTRVIiLCJleHAiOjE2ODk2NjU2MTJ9.w1ajW-rzA96nXwKYhh5H8ZNYtGkGVwgMYRkWxWcHQNU',
+                                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0YWVnb25AZ21haWwuY29tIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTY4OTc0NDc4NH0.2dvdlfc1RU61cnmw0CUm5k6rEA5-ODm-m2OhmN9cmgE',
                                 }
                             })
                             .then(response =>{
@@ -90,11 +96,11 @@
                             .catch(err => console.log("Error !"));
                         }
                         if(i==1){
-                            fetch('http://172.20.10.14:8080/api/data/get/taegon1998@gmail.com', {
+                            fetch('http://192.168.201.4:8080/api/data/get/Delhi', {
                             method: 'GET',
                             headers:{
                                 'Content-Type': 'application/json',
-                                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0YWVnb24xOTk4QGdtYWlsLmNvbSIsImF1dGgiOiJST0xFX1VTRVIiLCJleHAiOjE2ODk2NjU2MTJ9.w1ajW-rzA96nXwKYhh5H8ZNYtGkGVwgMYRkWxWcHQNU',
+                                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYWJpMDUxNzlAZ21haWwuY29tIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTY4OTc0NDgxNH0.BzINvhp5pCnyaIxEDpaL8yndqus5gmKFH6IH8e6Nlfc',
                             }
                         })
                         .then(response =>{
