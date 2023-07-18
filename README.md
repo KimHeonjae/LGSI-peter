@@ -25,8 +25,7 @@
 ### Description
 According to the data from the World Health Organization (WHO) on 'Household drinking water’ data, from 2020 to 2022, the proportion of households with ‘at least basic’ access to drinking water has increased. However, the proportions of households with ‘Surface water’ and ‘Unimproved’ access have consistently decreased. Also A think tank "Science and Environment Center", which proposes policies to the government, points out that on average **200,000 people** die every year from inadequate water supply and contaminated water, and **75%** of India's total population is affected by contaminated water. The accumulation of water quality and flow monitoring data is of paramount importance in order to diagnose pollution status in rivers and effectively manage water quality through efficient control of pollutants. That's why we aim to enhance accessibility to clean water and promote better water management in India.
 
-
-<img src="https://github.com/KimHeonjae/LGSI-peter/assets/134956232/8ab67611-f8a9-4e7a-be04-f942843ba5aa.png" width="700" height="400">
+<img src="https://github.com/KimHeonjae/LGSI-peter/assets/134956232/44863af8-0c02-45f9-852f-f5e8116977f4.png" width="900" height="400">
 
 ###### Source:
 <https://www.who.int/data/collections>
@@ -138,7 +137,7 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
   
 ## Workflow
 
-<img src="https://github.com/KimHeonjae/LGSI-peter/assets/134956232/e12c46eb-74c2-46b5-aa34-87ffc3afce47.png" width="800" height="400">
+<img src="https://github.com/KimHeonjae/LGSI-peter/assets/134956232/e12c46eb-74c2-46b5-aa34-87ffc3afce47.png" width="800" height="450">
 
 ---------
 
