@@ -113,6 +113,11 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 
 <img src="https://github.com/KimHeonjae/LGSI-peter/assets/134956232/74430fcf-0c78-467c-a979-2d7e70948b1b.png" width="700" height="400">
 
+--------
+
+## Entity Relationship Diagram(ERD)
+
+<img src="https://github.com/KimHeonjae/LGSI-peter/assets/134956232/b589ddd4-6d07-45f2-9c18-db5e66a6b207.png" width="700" height="400">
 
 --------
 
