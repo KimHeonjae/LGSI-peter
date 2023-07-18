@@ -31,6 +31,7 @@
     margin-bottom:7%;
     width:100%;
     height:100%;
+    background-color: white;
 }
 .frame{
     position: relative;
@@ -43,6 +44,7 @@
     border: none;
     opacity: 1;
     text-align: center;
+    background-color: white;
 }
 .frame #time{
     margin-top: 1%;
@@ -99,7 +101,6 @@
     padding:0;
     column-gap: 15px;
     row-gap : 15px;
-    /* background : gray; */
 }
 .gridItem{
     width:100%;
