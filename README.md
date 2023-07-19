@@ -76,22 +76,11 @@ According to the data from the World Health Organization (WHO) on 'Household dri
   - HTML5
   - CSS3
   - Javascript
-      
-For building and running the application you need:
-Node.js ....
-......
-......
-필요한 요구사항들과 버전들 적어준다.
-
+    
 ### Installation
 - Hardware
   - library to download - DHT sensor library by Adafruit (1.4.4 v)
       - Download link: https://github.com/adafruit/DHT-sensor-library
-- Back-End
-  - 
-      - 
-  
-repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 과정에 대한 내용들 코드로.
 
 --------
 
