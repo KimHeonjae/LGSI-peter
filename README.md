@@ -14,6 +14,7 @@
 - [System Architecture](#system-architecture)
 - [Entity Relationship Diagram(ERD)](#entity-relationship-diagram)
 - [Screen configuration / API address](#screen-configuration-/-api-address)
+- [Detailed water quality](#detailed-water-quality)
 - [Key features](#key-features)
 - [Workflow](#workflow)
 - [Expectation](#expectation)
@@ -128,6 +129,18 @@ repository를 clone하고 패키지 설치, 환경변수 설정, 실행하는 �
 
 - Back-End
   - API address: <https://www.notion.so/API-Document-bf95aca04f6c45c292381999a01e6694?pvs=4>
+
+---------
+
+## Detailed water quality
+- Water temperature
+  - The temperature of the sea ranges from 0 to 30 degree Celsius. Considering the impact of water temperature fluctuations on marine life, the range between 20 and 26 degrees Celsius is considered optimal for living conditions and is marked as ‘Good’. However, temperatures below 10 degrees Celsius and above 30 degrees Celsius can cause respiratory problems and make it difficult to sustain life, so they are marked as ‘Worst’. 
+- pH
+  - pH is an indicator of the acidity and alkalinity of water, expressed in numbers from 1 to 14. The optimum pH required will vary in different supplies according to the composition of the water and the nature of the construction materials used in the distribution system. But it is usually in the range 6.5–8.5 and is marked as ‘Good’.
+- Turbidity
+  - Turbidity is an indicator of the cloudiness level of water, caused by various suspended particles. More specifically, it refers to the extent to which light reacts to suspended particles in the water. SiO2 is commonly used as a standard for measuring turbidity. Similarly, turbidity values usually fall within the range of 0 to 100 (SS, mg/L), readings exceeding 100 are marked as ‘Worst’.
+- Water level
+  - The water level is the height from a reference plane to the water surface. If no specific reference plane is specified, the average sea level is commonly used as the reference. However, it should be noted that the average sea level is not constant across the entire Earth’s surface.
 
 ---------
 
