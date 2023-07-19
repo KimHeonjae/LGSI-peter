@@ -81,7 +81,7 @@ function dupCheck() {
         email: email
     };
 
-    fetch("http://192.168.201.4:8080/api/members/duplicate", {
+    fetch("http://192.168.220.1:8080/api/members/duplicate", {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -123,7 +123,7 @@ function join() {
         cityName: cityName
     };
 
-    fetch("http://192.168.201.4:8080/api/members/signup", {
+    fetch("http://192.168.220.1:8080/api/members/signup", {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
