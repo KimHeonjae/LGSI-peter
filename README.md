@@ -71,7 +71,11 @@ According to the data from the World Health Organization (WHO) on 'Household dri
     - pH Sensor: A2, A6
     - Turbidity Sensor: A3, A7 
     - Water level Sensor: A0, A4 
-    - Temperature and Humidity Sensor: A1, A5 
+    - Temperature and Humidity Sensor: A1, A5
+- Front-End
+  - HTML5
+  - CSS3
+  - Javascript
       
 For building and running the application you need:
 Node.js ....
