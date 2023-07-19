@@ -18,7 +18,6 @@
 - [Workflow](#workflow)
 - [Expectation](#expectation)
 
-좋음, 보통, 나쁨, 최악(인 경우엔 메일 내용 어떤거)
 -----------
 
 ## Project information
