@@ -3,32 +3,25 @@
 <head>
 	<title>login</title>
     <link rel="stylesheet" href="../css/login.css" />
+    <script type="text/javascript" src="../js/login.js"></script>
 </head>
 <body>
-    <script>
-        function showPopup_() {
-          document.getElementById("popup_").style.display = "block";
-        }
-        function hidePopup_() {
-          document.getElementById("popup_").style.display = "none";
-        }
-    </script>
     <main>
         <div class="container">
             <h1>Log in</h1>
             <div class="overlay">
                 <div class="frame">
                     <h3>Email</h3>
-                    <input class="textBox" type="text" placeholder="">
+                    <input class="textBox" type="text" name="email" placeholder="">
                     <h3>Password</h3>
-                    <input class="textBox" type="text" placeholder="">
+                    <input class="textBox" type="password" name="password" placeholder="">
                 </div>
             </div>
             <div class="frame2">
-                <button class="bottom-login" onclick="showPopup_()">Log in</button>
-                <div id="popup_" class="popup_">
-                    <p>Completed!</p>
-                    <button class="close" onclick="hidePopup_()">close</button>
+                <button class="bottom-login" onclick="login()">Log in</button>
+                <div id="popup" class="popup">
+                    <p id="pMessage"></p>
+                    <button class="close" onclick="hidePopup()">close</button>
                 </div> 
                 <button class="bottom-join" onclick="location.href='join.html'">Join</button>
             </div>
